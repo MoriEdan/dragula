@@ -451,7 +451,7 @@ function dragula (initialContainers, options) {
 
   function getImmediateChild (dropTarget, target) {
     var immediate = target;
-    while (immediate !== dropTarget && getParent(immediate) !== dropTarget) {
+    while (immediate && immediate !== dropTarget && getParent(immediate) !== dropTarget) {
       immediate = getParent(immediate);
     }
     if (immediate === documentElement) {
